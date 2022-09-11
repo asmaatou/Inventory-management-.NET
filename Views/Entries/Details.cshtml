@@ -1,0 +1,65 @@
+﻿@model GDStock.Models.Entries
+
+@{
+    ViewBag.Title = "Detail Entry";
+}
+
+<h2>Detail Entry</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Drivers.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drivers.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stocks.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stocks.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suppliers.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suppliers.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index",null, new { @class = "btn btn-info" })
+</p>

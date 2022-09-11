@@ -1,0 +1,41 @@
+﻿@model GDStock.Models.Stocks
+
+@{
+    ViewBag.Title = "Detail Stock";
+}
+
+<h2>Detail Stock</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Suppliers.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suppliers.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index",null, new { @class = "btn btn-info" })
+</p>
